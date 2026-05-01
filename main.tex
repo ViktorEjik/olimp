@@ -1,0 +1,59 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{geometry}
+\geometry{top=2.5cm, bottom=2.5cm, left=2cm, right=2cm}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{tcolorbox}
+\usepackage{verbatim}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\definecolor{examplebg}{HTML}{F5F5F5}
+\definecolor{exampleframe}{HTML}{CCCCCC}
+
+\newtcolorbox{examplebox}[1][]{%
+  breakable, 
+  colback=examplebg, 
+  colframe=exampleframe, 
+  title=Пример, 
+  fonttitle=\bfseries, 
+  #1
+}
+
+\newcommand{\inout}[2]{%
+  \begin{minipage}[t]{0.48\linewidth}
+    \textbf{Ввод:}\\
+    \begin{verbatim}
+#1
+    \end{verbatim}
+  \end{minipage}%
+  \hfill%
+  \begin{minipage}[t]{0.48\linewidth}
+    \textbf{Вывод:}\\
+    \begin{verbatim}
+#2
+    \end{verbatim}
+  \end{minipage}
+}
+
+\begin{document}
+\begin{center}
+  {\LARGE \textbf{Олимпиада по информатике}}\\[0.5cm]
+  {\large Отборочный этап}\\
+  \vspace{0.5cm}
+\end{center}
+
+% Импорт задач из отдельных папок
+\input{prob1/prob1.tex}
+\newpage
+\input{prob2/prob2.tex}
+\newpage
+\input{prob3/prob3.tex}
+\newpage
+\input{prob4/prob4.tex}
+\newpage
+\input{prob5/prob5.tex}
+
+\end{document}
